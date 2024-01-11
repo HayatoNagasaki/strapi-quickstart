@@ -7,8 +7,9 @@ services:
       dockerfile: ./Dockerfile
     container_name: strapi
     # command: npm run develop
-    command: NODE_ENV=production npm run start
+    command: npm run build
     environment:
+      - NODE_ENV=production
       - DATABASE_CLIENT=postgres
       - DATABASE_HOST=db
       - DATABASE_PORT=5432
